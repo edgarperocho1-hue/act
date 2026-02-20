@@ -1,0 +1,357 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+   
+    background: url("images/Background.jpg") center/cover no-repeat fixed,
+                linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+body,
+h1, h2, h3, li, a {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* avoid shadows on paragraphs since they often sit on light cards */
+p {
+    color: #fff;
+}
+
+.card {
+    color: #333;
+    text-shadow: none;
+}
+
+/* explicitly strip shadows from any text inside a card container */
+.card h1, .card h2, .card h3, .card p, .card li, .card a {
+    color: #333;
+    text-shadow: none;
+}
+
+
+.main-nav a {
+    color: #fff;
+}
+
+
+header {
+    background: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(8px);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+a {
+    color: inherit;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(8px);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px; 
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #ff4757;
+}
+
+.hero-image img {
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    /* no border or background as requested */
+    border: none;
+    background-color: transparent;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* card style utility */
+.card {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Biodata */
+.biodata {
+    background: none;
+}
+
+/* ensure the section title is visible on dark background */
+.biodata h2 {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.biodata .biodata-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 1rem 2rem;
+    justify-items: start;
+}
+
+.biodata .biodata-details p {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    color: #333;
+    /* allow long text (emails, URLs) to break inside the box */
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* Lab Section */
+.labs {
+    background: none;
+}
+
+/* ensure heading on labs section is white for contrast */
+.labs h2 {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* lab buttons are now links styled to look like the previous buttons */
+/* when inside the .labs card, use dark text and border for contrast */
+.labs .lab-buttons a,
+.labs .lab-buttons button {
+    display: inline-block;
+    padding: 14px 30px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.labs .lab-buttons a:hover,
+.labs .lab-buttons button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+
+.lab-buttons {
+    margin-top: 20px;
+}
+
+/* lab buttons are now links styled to look like the previous buttons */
+/* when inside the .labs card, use dark text and border for contrast */
+.labs .lab-buttons a,
+.labs .lab-buttons button {
+    display: inline-block;
+    padding: 14px 30px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.labs .lab-buttons a:hover,
+.labs .lab-buttons button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Explore Section */
+.explore {
+    background: none;
+}
+
+.explore button {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.explore button:hover {
+    background: #ff4757;
+    animation: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Files Section */
+.files {
+    background: none;
+}
+
+.files button {
+    padding: 12px 25px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #1dd1a1;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.files button:hover {
+    background: #10ac84;
+    transform: scale(1.03);
+}
+
+.files ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.files li {
+    margin: 0.7rem 0;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.files li:hover {
+    background: rgba(255,255,255,1);
+    transform: translateX(4px);
+}
+
+.files a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: #0072ff;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    color: #eee;
+}
+
+@media (max-width: 600px) {
+    .biodata .biodata-details {
+        grid-template-columns: 1fr;
+    }
+}
