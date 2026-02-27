@@ -1,6 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    background-image: url("../../images/Background.jpg"), 
+                      linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +13,7 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgb(0, 0, 0);
     padding: 20px;
     width: 400px;
     border-radius: 10px;
